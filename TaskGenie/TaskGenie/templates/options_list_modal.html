@@ -1,0 +1,49 @@
+<div class="modal fade" id="edit_list_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit List</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="edit_list_form" method="POST">
+          {{ list_form.csrf_token }}
+          {{ list_form.name.label(class_='font-weight-bold') }}
+          {{ list_form.name(value=list_name, id='list_name_input') }}
+      </div>
+      <div class="modal-footer">
+        {{ list_form.csrf_token }}
+        {{ list_form.edit_list(class_="btn btn-primary") }}
+      </form>
+      <form id="del_list_form" method="POST">
+        {{ list_form.csrf_token }}
+        {{ list_form.delete_list(class_="btn btn-danger") }}
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+  // 404 Was hardcoded because otherwise it would give a type error
+  var url_template_edit = "{{ url_for('lists.edit_list', list_id='404') }}";
+  var url_template_del = "{{ url_for('lists.delete_list', list_id='404') }}";
+
+  $('a[id^="edit_list_"]').on('click', function (event) {
+    var list_id = $(this).data('list-id');
+    var list_name = $(this).data('list-name');
+    var modal = $('#edit_list_modal');
+    modal.find('#list_name_input').val(list_name);
+
+    var url_edit = url_template_edit.replace('404', list_id);
+    $('#edit_list_form').attr('action', url_edit);
+
+    var url_del = url_template_del.replace('404', list_id);
+    $('#del_list_form').attr('action', url_del);
+    });
+</script>

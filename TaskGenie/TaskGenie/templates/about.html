@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{%extends "layout.html" %}
+
+{% block content %}
+<div class="d-flex justify-content-center">
+    
+    <h1>About - Task Genie</h1>
+
+</div>
+
+<div class="d-flex justify-content-center">
+    <div class="w-50 d-flex flex-column justify-content-center mx-5">
+        <p>Hey there! Thanks for checking out Task Genie, my latest creation! As a developer, I'm always looking for ways to make life easier, and that's where this app comes in.</p>
+        <p>Task Genie is a to-do list app that helps you keep track of all your daily tasks, deadlines, and priorities. Using Python and Flask, I was able to create a seamless user experience that lets you add, edit, and delete tasks with ease. And with the help of SQLAlchemy, Task Genie can store all your data in a online Postgres database, so you don't have to worry about losing your tasks when you close the app.</p>
+        <p>Throughout the development of this app, I learned a lot about web development, databases, and the importance of a good UI/UX. The app was deployed in Render's free tier, gave me a bit of deployment headache experience too!</p>
+        <p>Most importantly, I learned the value of organization and planning. After all, this app was created to help you stay on top of your tasks and goals!</p>
+        <p>Here are some key learnings that I had while developing Task Genie:</p>
+        <ul>
+        <li><strong>Abstraction:</strong> I started by assuming that Task Genie would only be able to handle one single list. This led to the specification of the model for tasks, but I wasn't satisfied with Task Genie's simplicity, so I ended up adding multiple lists. What could've been a 15-minute job ended up being an hour or two of me trying to fix everything with the new implementation.</li>
+        <li><strong>Planning:</strong> What started as a simple to-do app quickly turned into a mountain of features that I was eager to add. This led me to confusion once the "not knowing what to do" threshold was crossed.</li>
+        <li><strong>Persistence:</strong> At some points, features seemed impossible to be done within the context of all the choices I made until these same points. Not quitting and being persistent turned out to be much more satisfactory. The best example of this has to be the List option button (to edit/delete a list), where I had to pass the ID value of the list into the modal.</li>
+        </ul>
+        <p>I opted out of creating an account system as I had already done it in a previous project and solely wanted to use Task Genie for myself.</p>
+        <p>So go ahead, give Task Genie a try, and let me know what you think. I'm always open to feedback and suggestions for improvement. Happy tasking!</p>
+    </div>
+</div>
+{% endblock content %}

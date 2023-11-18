@@ -1,0 +1,88 @@
+/* Legend */
+.legend-square {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 50px;
+  vertical-align: middle;
+}
+
+.form-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.custom-textarea {
+  width: 275px;
+}
+
+.bg-Low {
+  background-color: #28a745;
+}
+
+.bg-Medium {
+  background-color: #ffc107;
+}
+
+.bg-High {
+  background-color: #dc3545;
+}
+
+/* Large Checkbox */
+.checkbox-lg .form-check-input{
+  top: .8rem;
+  scale: 1.4;
+  margin-right: 0.7rem;
+  }
+
+ .checkbox-lg .form-check-label {
+  padding-top: 13px;
+  }
+
+/* Greyed Out Task */
+.completed {
+    opacity: 0.4;
+    pointer-events: auto;
+  }
+
+/* xs Button */
+.btn-group-xs > .btn, .btn-xs {
+  padding: .25rem .4rem;
+  font-size: .875rem;
+  line-height: .5;
+  border-radius: .2rem;
+ }
+
+ /* Delete and Edit Buttons */
+ .btn {
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+  padding: 1px 5px;
+  margin-top: 5px;
+  margin-left: 2px;
+}
+.btn_edit:hover {
+  color: blue;
+}
+.btn_del:hover {
+  color: red;
+}
+
+
+/* Hyperlinks from List Dropdown */
+.link_a {
+  color: black;
+}
+
+.link_a:hover {
+  color: black;
+  text-decoration: none;
+  font-weight: bold
+}
+
+

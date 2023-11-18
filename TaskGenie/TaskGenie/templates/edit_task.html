@@ -1,0 +1,10 @@
+<li class="list-group-item" id="edit-task-form-{{ task.id }}" style="display: none;" data-task-id="{{ task.id }}">
+    <form action="{{ url_for('tasks.task_edit', list_name=list_name, task_id=task.id) }}" method="POST">
+      {{ task_form.csrf_token }}
+      {{ task_form.title.label(class_='font-weight-bold') }} {{ task_form.title(value=task.title) }}
+      {{ task_form.due.label }} {{ task_form.due(value=task.due) }}
+      {{ task_form.priority.label }} {{ task_form.priority(value=task.priority) }}
+      {{ task_form.description.label }} {{ task_form.description(class_='custom-textarea', value=task.description) }}
+      {{ task_form.add_task(type="submit") }}
+      </form>
+  </li>
